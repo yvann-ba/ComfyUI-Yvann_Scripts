@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-#DEFAULT_WORKFLOW="https://..."
+DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
     #"package-1"
@@ -27,41 +27,6 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 )
 
-CHECKPOINT_MODELS=(
-    "https://huggingface.co/Lykon/dreamshaper-xl-v2-turbo/blob/main/DreamShaperXL_Turbo_v2_1.safetensors"
-)
-
-LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
-)
-
-VAE_MODELS=(
-    "https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/blob/main/sdxl.vae.safetensors"
-)
-
-ESRGAN_MODELS=(
-    # "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    # "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    # "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
-)
-
-CONTROLNET_TILE_XL=("https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors")
-CONTROLNET_DEPTH_XL=("https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors")
-CONTROLNET_CANNY_XL=("https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/blob/main/diffusion_pytorch_model_V2.safetensors")
-
-
-CONTROLNET_MODELS=(
-
-)
-
-ANIMATEDIFF_MODELS=(
-    "https://huggingface.co/hotshotco/Hotshot-XL/blob/main/hsxl_temporal_layers.f16.safetensors"
-)
-
-UPSCALE_MODELS=(
-    "https://civitai.com/api/download/models/125843?type=Model&format=PickleTensor"
-)
-
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -76,9 +41,7 @@ function provisioning_start() {
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
-    cd /workspace/ComfyUI/models/
-    cd checkpoint
-    wget -O https://huggingface.co/Lykon/dreamshaper-xl-v2-turbo/blob/main/DreamShaperXL_Turbo_v2_1.safetensors
+
     provisioning_print_end
 }
 
@@ -132,21 +95,6 @@ function provisioning_get_default_workflow() {
             echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
         fi
     fi
-}
-
-function provisioning_get_models() {
-    if [[ -z $2 ]]; then return 1; fi
-    
-    dir="$1"
-    mkdir -p "$dir"
-    shift
-    arr=("$@")
-    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
-    for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
-        provisioning_download "${url}" "${dir}"
-        printf "\n"
-    done
 }
 
 function provisioning_print_header() {
