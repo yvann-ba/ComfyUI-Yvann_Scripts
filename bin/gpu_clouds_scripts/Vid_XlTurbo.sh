@@ -20,7 +20,11 @@ PIP_PACKAGES=(
 
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
 )
 
 CHECKPOINT_MODELS=(
@@ -55,7 +59,7 @@ ANIMATEDIFF_MODELS=(
 )
 
 UPSCALE_MODELS=(
-    ""
+    "https://civitai.com/api/download/models/125843?type=Model&format=PickleTensor"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
