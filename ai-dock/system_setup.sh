@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://..."
+DEFAULT_WORKFLOW="https://raw.githubusercontent.com/yvann-ba/ComfyUI-Yvann_Scripts/refs/heads/main/ai-dock/cloud_XL.json"
 
 APT_PACKAGES=(
     #"package-1"
