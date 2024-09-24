@@ -2,7 +2,7 @@
 //It will retrieve you a list of all the custom nodes used in your workflow
 
 const nodesInWorkflow = app.graph._nodes.map((node) => node.type)
-fetch('http://localhost:8189/api/object_info') //add your local port
+fetch('http://127.0.0.1:8190/api/object_info') //add your local port
   .then((response) => {
     return response.json()
   })
