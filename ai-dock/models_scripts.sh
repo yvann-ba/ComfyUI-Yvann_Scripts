@@ -21,6 +21,7 @@ cd XL
 wget -O XinsirTileXL.safetensors https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors?download=true
 wget -O XinsirDepthXL https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors?download=true
 wget -O XinsirCannyXL.safetensors https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/blob/main/diffusion_pytorch_model_V2.safetensors?download=true
+cd ..
 
 cd ../upscale_models
 wget -O 4x-UltraSharp.pth https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth?download=true
