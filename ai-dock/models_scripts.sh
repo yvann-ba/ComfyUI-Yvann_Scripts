@@ -1,6 +1,6 @@
 cd /workspace/ComfyUI/models/
 
-cd checkpoint
+cd checkpoints
 wget -O DreamShaperXL_Turbo_v2_1.safetensors https://huggingface.co/Lykon/dreamshaper-xl-v2-turbo/resolve/main/DreamShaperXL_Turbo_v2_1.safetensors?download=true
 
 cd ../vae
@@ -9,8 +9,10 @@ wget -O fixFP16ErrorsSDXLLowerMemoryUse_v10.safetensors https://huggingface.co/m
 cd ../animatediff_models
 wget -O hsxl_temporal_layers.f16.safetensors https://huggingface.co/hotshotco/Hotshot-XL/resolve/main/hsxl_temporal_layers.f16.safetensors?download=true
 
-cd ../ipadapter
-wget -O ip-adapter_sdxl_vit-h.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors?download=true
+cd ..
+mkdir ipadapter
+cd ipadapter
+wget -O ip-adapter-plus_sdxl_vit-h.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors?download=true
 
 cd ../clip_vision
 wget -O CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors
@@ -18,9 +20,10 @@ wget -O CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors https://huggingface.co/h94/I
 cd ../controlnet
 mkdir XL
 cd XL
-wget -O XinsirTileXL.safetensors https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors?download=true
-wget -O XinsirDepthXL https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0/blob/main/diffusion_pytorch_model.safetensors?download=true
-wget -O XinsirCannyXL.safetensors https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/blob/main/diffusion_pytorch_model_V2.safetensors?download=true
+wget -O XinsirTileXL.safetensors https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors
+
+wget -O XinsirDepthXL.safetensors https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors
+wget -O XinsirCannyXL.safetensors https://huggingface.co/xinsir/controlnet-canny-sdxl-1.0/resolve/main/diffusion_pytorch_model_V2.safetensors
 cd ..
 
 cd ../upscale_models
