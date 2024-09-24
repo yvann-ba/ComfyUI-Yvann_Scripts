@@ -71,42 +71,14 @@ function provisioning_start() {
     source /opt/ai-dock/etc/environment.sh
     source /opt/ai-dock/bin/venv-set.sh comfyui
 
+
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
-        "${CHECKPOINT_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/unet" \
-        "${UNET_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/lora" \
-        "${LORA_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/animatediff_models" \
-        "${ANIMATEDIFF_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet" \
-        "${CONTROLNET_MODELS[@]}"  
-
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet/xl/tile" \
-        "${CONTROLNET_TILE_XL[@]}"        
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet/xl/depth" \
-        "${CONTROLNET_DEPTH_XL[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/controlnet/xl/canny" \
-        "${CONTROLNET_CANNY_XL[@]}"
-
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/vae" \
-        "${VAE_MODELS[@]}"
-    provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/upscale_models" \
-        "${UPSCALE_MODELS[@]}"
+    cd /workspace/ComfyUI/models/
+    cd checkpoint
+    wget -O https://huggingface.co/Lykon/dreamshaper-xl-v2-turbo/blob/main/DreamShaperXL_Turbo_v2_1.safetensors
     provisioning_print_end
 }
 
