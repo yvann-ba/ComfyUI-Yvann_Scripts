@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# This file will be sourced in init.sh
-
-# https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
-
-# Packages are installed after nodes so we can fix them...
-
-#DEFAULT_WORKFLOW="https://..."
+#DEFAULT_WORKFLOW="https://raw.githubusercontent.com/yvann-ba/ComfyUI-Yvann_Scripts/refs/heads/main/ai-dock/cloud_XL.json"
 
 APT_PACKAGES=(
     #"package-1"
@@ -19,10 +13,15 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    "https://github.com/ltdrdata/ComfyUI-Manager"
-)
 
-### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
+    #models_install/Vid2Vid_XL.sh
+    "https://github.com/ltdrdata/ComfyUI-Manager"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+)
 
 function provisioning_start() {
     if [[ ! -d /opt/environments/python ]]; then 
@@ -31,10 +30,12 @@ function provisioning_start() {
     source /opt/ai-dock/etc/environment.sh
     source /opt/ai-dock/bin/venv-set.sh comfyui
 
+
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_nodes
     provisioning_get_pip_packages
+
     provisioning_print_end
 }
 
@@ -88,21 +89,6 @@ function provisioning_get_default_workflow() {
             echo "export const defaultGraph = $workflow_json;" > /opt/ComfyUI/web/scripts/defaultGraph.js
         fi
     fi
-}
-
-function provisioning_get_models() {
-    if [[ -z $2 ]]; then return 1; fi
-    
-    dir="$1"
-    mkdir -p "$dir"
-    shift
-    arr=("$@")
-    printf "Downloading %s model(s) to %s...\n" "${#arr[@]}" "$dir"
-    for url in "${arr[@]}"; do
-        printf "Downloading: %s\n" "${url}"
-        provisioning_download "${url}" "${dir}"
-        printf "\n"
-    done
 }
 
 function provisioning_print_header() {
