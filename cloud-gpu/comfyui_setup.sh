@@ -21,6 +21,7 @@ NODES=(
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
     "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/crystian/ComfyUI-Crystools"
 )
 
 function provisioning_start() {
