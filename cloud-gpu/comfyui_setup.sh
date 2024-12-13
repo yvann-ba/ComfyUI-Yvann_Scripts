@@ -23,7 +23,7 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/kijai/ComfyUI-KJNodes"
-    "https://github.com/chrisgoringe/cg-use-everywhere"
+    "https://github.com/chrisgoringe/cg-use-everywhere"    
 )
 
 function provisioning_start() {
