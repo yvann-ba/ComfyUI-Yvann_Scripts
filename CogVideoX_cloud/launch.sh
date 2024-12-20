@@ -16,10 +16,10 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/Fannovel16/comfyui_controlnet_aux"
-    "https://github.com/yvsai/ComfyUI-CogVideoXWrapper"
-    "https://github.com/Kosinkadink/ComfyUI-KJNodes"
+    "https://github.com/kijai/ComfyUI-CogVideoXWrapper"
+    "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/chrisgoringe/cg-use-everywhere"
-    "https://github.com/crystian/ComfyUI-essentials"
+    "https://github.com/cubiq/ComfyUI-essentials"
 )
 
 function provisioning_start() {
@@ -40,7 +40,7 @@ function provisioning_start() {
     cd CogVideo/loras
     wget -O CogVideoX-Fun-V1.1-5b-InP-MPS.safetensors "https://huggingface.co/alibaba-pai/CogVideoX-Fun-V1.1-Reward-LoRAs/resolve/main/CogVideoX-Fun-V1.1-5b-InP-MPS.safetensors?download=true"
 
-    cd ../clip
+    cd ../../clip
     wget -O t5xxl_fp8_e4m3fn.safetensors "https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/t5xxl_fp8_e4m3fn.safetensors?download=true"
 
     provisioning_print_end
