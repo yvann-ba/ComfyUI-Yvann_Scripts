@@ -45,7 +45,9 @@ function provisioning_start() {
     cd ../vae
     wget -O fixFP16ErrorsSDXLLowerMemoryUse_v10.safetensors https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl.vae.safetensors?download=true
 
-    cd ../animatediff_models
+    cd ..
+    mkdir animatediff_models
+    cd animatediff_models/
     wget -O hsxl_temporal_layers.f16.safetensors https://huggingface.co/hotshotco/Hotshot-XL/resolve/main/hsxl_temporal_layers.f16.safetensors?download=true
 
     cd ..
