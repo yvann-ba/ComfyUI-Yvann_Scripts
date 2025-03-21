@@ -21,7 +21,7 @@ NODES=(
     "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
     "https://github.com/kijai/ComfyUI-Lotus.git"
     "https://github.com/chrisgoringe/cg-use-everywhere.git"
-    "https://github.com/kijai/ComfyUI-KJNodes.git"
+    "https://github.com/cubiq/ComfyUI_essentials.git"
 )
 
 function provisioning_start() {
@@ -63,6 +63,9 @@ function provisioning_start() {
 
     cd ../controlnet
     wget -O union-promax.safetensors https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model_promax.safetensors?download=true
+
+    cd ../upscale_models
+    wget -O 4x-UltraSharp.pth https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth?download=true
 
     provisioning_print_end
 }
