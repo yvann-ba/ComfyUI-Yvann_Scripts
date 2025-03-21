@@ -21,7 +21,7 @@ NODES=(
     "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
     "https://github.com/kijai/ComfyUI-Lotus.git"
     "https://github.com/chrisgoringe/cg-use-everywhere.git"
-    "https://github.com/kijai/ComfyUI-KJNodes.git"
+    "https://github.com/cubiq/ComfyUI_essentials.git"
 )
 
 function provisioning_start() {
@@ -53,7 +53,7 @@ function provisioning_start() {
     cd ..
     mkdir ipadapter
     cd ipadapter
-    wget -O ip-adapter_sdxl_vit-h.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors?download=true
+    wget -O ip-adapter-plus_sdxl_vit-h.safetensors https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors?download=true
 
     cd ../diffusion_models
     wget -O lotus-depth-g-v2-1-disparity-fp16.safetensors https://huggingface.co/Kijai/lotus-comfyui/resolve/main/lotus-depth-g-v2-1-disparity-fp16.safetensors?download=true
@@ -63,6 +63,9 @@ function provisioning_start() {
 
     cd ../controlnet
     wget -O union-promax.safetensors https://huggingface.co/xinsir/controlnet-union-sdxl-1.0/resolve/main/diffusion_pytorch_model_promax.safetensors?download=true
+
+    cd ../upscale_models
+    wget -O 4x-UltraSharp.pth https://huggingface.co/lokCX/4x-Ultrasharp/resolve/main/4x-UltraSharp.pth?download=true
 
     provisioning_print_end
 }
