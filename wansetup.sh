@@ -19,6 +19,7 @@ NODES=(
     "https://github.com/kijai/ComfyUI-KJNodes"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux.git"
     "https://github.com/cubiq/ComfyUI-essentials"
+    "https://github.com/kijai/ComfyUI-DepthAnythingV2"
 
 )
 
