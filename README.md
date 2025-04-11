@@ -1,10 +1,11 @@
 # ComfyUI-Yvann_Scripts
 
-Collection of ComfyUI scripts and workflows for AI video generation, optimized for cloud deployment.
+![comfyui](https://img.shields.io/badge/ComfyUI-Tools-blue)
+![python](https://img.shields.io/badge/Python-3.8+-green)
+![cloud](https://img.shields.io/badge/Cloud-Ready-lightblue)
 
-## Overview
+Collection of ComfyUI scripts, workflows, cloud provisionning scripts for GenAI Workflows, mostly for cloud deployment.
 
-This repository contains scripts and workflows for ComfyUI, designed for AI video generation and processing using cloud GPU resources. Includes utility scripts for workflow management and metadata handling.
 
 ## Project Structure
 
