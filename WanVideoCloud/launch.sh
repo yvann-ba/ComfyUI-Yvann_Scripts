@@ -13,12 +13,12 @@ PIP_PACKAGES=(
 )
 
 NODES=(
+	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+ "https://github.com/kijai/ComfyUI-DepthAnythingV2"
     "https://github.com/ltdrdata/ComfyUI-Manager"
-    "https://github.com/Kijai/ComfyUI-WanVideoWrapper"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/kijai/ComfyUI-KJNodes"
 	"https://github.com/Fannovel16/comfyui_controlnet_aux.git"
-    "https://github.com/cubiq/ComfyUI-essentials"
 
 )
 
@@ -38,13 +38,16 @@ function provisioning_start() {
     cd /workspace/ComfyUI/models/
 
     cd text_encoders/
-    wget -O umt5-xxl-enc-bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true
+    wget -O umt5_xxl_fp8_e4m3fn_scaled.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true
 
 	cd ../vae/
-    wget -O Wan2_1_VAE_bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true
+    wget -O wan_2.1_vae.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true
 
 	cd ../diffusion_models/
-	wget -O vace_preview_fp32.safetensors https://huggingface.co/ali-vilab/VACE-Wan2.1-1.3B-Preview/resolve/main/diffusion_pytorch_model.safetensors?download=true
+	wget -O Wan2.1-Fun-1.3B-Control.safetensors https://huggingface.co/alibaba-pai/Wan2.1-Fun-1.3B-Control/resolve/main/diffusion_pytorch_model.safetensors?download=true
+
+ 	cd ../clip_vision/
+  	wget -O clip_vision_h.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true
 
 
     provisioning_print_end
