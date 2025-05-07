@@ -14,6 +14,7 @@ PIP_PACKAGES=(
 
 NODES=(
 	"https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+ "https://github.com/rgthree/rgthree-comfy"
  "https://github.com/kijai/ComfyUI-DepthAnythingV2"
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
