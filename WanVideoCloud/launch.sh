@@ -52,6 +52,12 @@ function provisioning_start() {
  	cd ../clip_vision/
   	wget -O clip_vision_h.safetensors https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true
 
+	cd ../loras/
+ 	
+  	 wget -O Wan2.1-1.3b-lora-highresfix-v1_new.safetensors https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/resolve/main/Wan2.1-1.3b-lora-highresfix-v1_new.safetensors?download=true
+
+	wget -O Wan2.1-1.3b-lora-exvideo-v1_new.safetensors https://huggingface.co/Evados/DiffSynth-Studio-Lora-Wan2.1-ComfyUI/resolve/main/Wan2.1-1.3b-lora-exvideo-v1_new.safetensors?download=true
+
 
     provisioning_print_end
 }
