@@ -22,6 +22,8 @@ NODES=(
  "https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git"
  "https://github.com/yvann-ba/ComfyUI_Yvann-Nodes.git"
  "https://github.com/AIWarper/ComfyUI-NormalCrafterWrapper.git"
+ "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
+ "https://github.com/crystian/ComfyUI-Crystools.git"
 
 )
 
