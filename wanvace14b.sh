@@ -56,6 +56,7 @@ function provisioning_start() {
 
 cd ../loras/
   wget -O Wan21_CausVid_14B_T2V_lora_rank32.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors?download=true
+  wget -O Wan21_CausVid_14B_T2V_lora_rank32_v2.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32_v2.safetensors?download=true
 
 
     provisioning_print_end
