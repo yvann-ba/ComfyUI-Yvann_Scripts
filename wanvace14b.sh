@@ -24,6 +24,7 @@ NODES=(
  "https://github.com/AIWarper/ComfyUI-NormalCrafterWrapper.git"
  "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
  "https://github.com/crystian/ComfyUI-Crystools.git"
+ "https://github.com/ryanontheinside/ComfyUI_ProfilerX.git"
 
 )
 
