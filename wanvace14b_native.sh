@@ -26,7 +26,7 @@ NODES=(
  "https://github.com/crystian/ComfyUI-Crystools.git"
  "https://github.com/ryanontheinside/ComfyUI_ProfilerX.git"
  "https://github.com/bytedance/comfyui-lumi-batcher.git"
- "https://github.com/ty0x2333/ComfyUI-Dev-Utils.git"
+ "https://github.com/MagoStudio/ComfyUI-Dev-Utils_Mago.git"
  "https://github.com/city96/ComfyUI-GGUF.git"
 
 )
