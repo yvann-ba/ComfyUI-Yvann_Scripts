@@ -25,6 +25,9 @@ NODES=(
  "https://github.com/ltdrdata/ComfyUI-Impact-Pack.git"
  "https://github.com/crystian/ComfyUI-Crystools.git"
  "https://github.com/ryanontheinside/ComfyUI_ProfilerX.git"
+ "https://github.com/bytedance/comfyui-lumi-batcher.git"
+ "https://github.com/ty0x2333/ComfyUI-Dev-Utils.git"
+ "https://github.com/city96/ComfyUI-GGUF.git"
 
 )
 
@@ -45,18 +48,15 @@ function provisioning_start() {
 
     cd text_encoders/
     #wget -O umt5-xxl-enc-fp8_e4m3fn.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-fp8_e4m3fn.safetensors?download=true
-    wget -O umt5-xxl-enc-bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true
+    wget -O umt5_xxl_fp8_e4m3fn_scaled https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true
 
 	cd ../vae/
-    wget -O Wan2_1_VAE_bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true
-
+	wget -O wan_2.1_vae.safetensors	https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true
 	cd ../diffusion_models/
-	wget -O Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-VACE_module_14B_fp8_e4m3fn.safetensors?download=true
-	wget -O Wan2_1-T2V-14B_fp8_e4m3fn.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-T2V-14B_fp8_e4m3fn.safetensors?download=true
+	wget -O Wan2.1_14B_VACE-Q5_K_S.gguf https://huggingface.co/QuantStack/Wan2.1_14B_VACE-GGUF/resolve/main/Wan2.1_14B_VACE-Q5_K_S.gguf?download=true
 
 
 cd ../loras/
-  wget -O Wan21_CausVid_14B_T2V_lora_rank32.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32.safetensors?download=true
   wget -O Wan21_CausVid_14B_T2V_lora_rank32_v2.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_CausVid_14B_T2V_lora_rank32_v2.safetensors?download=true
 
 
