@@ -48,7 +48,12 @@ function provisioning_start() {
 	cd ../diffusion_models/
 	wget -O Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Fun/Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors?download=true
 	wget -O Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Fun/Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors?download=true
+	cd ../controlnet/
+ 	wget -O lotus-depth-g-v2-1-disparity-fp16.safetensors https://huggingface.co/Kijai/lotus-comfyui/resolve/main/lotus-depth-g-v2-1-disparity-fp16.safetensors?download=true
+ 	wget -O lotus-depth-d-v-1-1-fp16.safetensors https://huggingface.co/Kijai/lotus-comfyui/resolve/main/lotus-depth-d-v-1-1-fp16.safetensors?download=true
+ 	wget -O lotus-depth-g-v1-0.safetensors https://huggingface.co/Kijai/lotus-comfyui/resolve/main/lotus-depth-g-v1-0.safetensors?download=true
 
+ 	
 
 cd ../loras/
   wget -O lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors?download=true
