@@ -45,6 +45,7 @@ function provisioning_start() {
     wget -O umt5-xxl-enc-bf16.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true
 	cd ../vae/
 	wget -O Wan2_1_VAE_bf16.safetensors	https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true
+	wget -O vae-ft-mse-840000-ema-pruned.safetensors	https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors?download=true
 	cd ../diffusion_models/
 	wget -O Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Fun/Wan2_2-Fun-Control-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors?download=true
 	wget -O Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/Fun/Wan2_2-Fun-Control-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors?download=true
